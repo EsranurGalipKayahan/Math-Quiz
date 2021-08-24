@@ -1,28 +1,14 @@
 'use strict';
-import { RESULT_CONTAINER_ID, RESULT_HEADER, RESULT_CLASS, HEADER_RESULT_CLASS, WRONG_CLASS, CORRECT_CLASS, PASSED_CLASS, CONTROL_BTN_CLASS,BTN_CLASS, CURRENT_TIME_ID} from "../constants.js";
-import { createDOMElement, getDOMElement, clearDOMElement } from "../utils/DOMUtils.js";
+import { RESULT_CONTAINER_ID, RESULT_HEADER, RESULT_CLASS, HEADER_RESULT_CLASS, WRONG_CLASS, CORRECT_CLASS, PASSED_CLASS, CONTROL_BTN_CLASS,BTN_CLASS} from "../constants.js";
+import { createDOMElement } from "../utils/DOMUtils.js";
 import { findScore, findNumberOfPassedQuestions} from "../handlers/finishHandler.js";
 import { addClassToElement } from "../utils/DOMUtils.js";
 import { quizData } from "../data.js";
 import { quit } from "../listeners/quitListener.js";
-import { stopStopwatch } from "../handlers/timeHandler.js";
 
-export const displayResults = () => {
-    const container =  getDOMElement(RESULT_CONTAINER_ID);
-    const headerElement = getDOMElement(RESULT_HEADER);
 
-    const scoreElement = getScoreElement();
-    headerElement.appendChild(scoreElement);
-    
-    const summaryElement = getSummaryElement();
-    headerElement.appendChild(summaryElement);
 
-    const bodyList =prepareQuestionList();
-    container.appendChild(bodyList);
-    const quitButton = createQuitButton();
-    container.appendChild(quitButton); 
-};
-const getScoreElement = () =>{
+export const getScoreElement = () =>{
 
     const scoreElement = createDOMElement('h2');
     const score =  findScore();
@@ -32,7 +18,7 @@ const getScoreElement = () =>{
     scoreElement.innerHTML+='<br>Total Time : '+quizData.time;
     return scoreElement;
 }
-const getSummaryElement = () =>{
+export const getSummaryElement = () =>{
     //display how many questions are correct, wrong and passed seperately
     const summaryElement = createDOMElement('h3');
     const summaryString1 = createDOMElement('span');
@@ -51,21 +37,17 @@ const getSummaryElement = () =>{
 
     return summaryElement;
 }
-export const setupFinishHTML = () => {
-    //adjust the finish screen
-    const container = getDOMElement('container');
-    clearDOMElement(container);
-
+export function getHeaderElement(){
     const headerElement = createDOMElement('div',{id : RESULT_HEADER, class: HEADER_RESULT_CLASS});
-    container.appendChild(headerElement);
-  
+    return headerElement;
+}
+export function getBodyContainer(){
     const bodyContainer = createDOMElement('div', {id : RESULT_CONTAINER_ID, class : RESULT_CLASS });
-
-    container.appendChild(bodyContainer);
-  }
+    return bodyContainer;
+}
   
 
-  function prepareQuestionList(){
+  export function prepareQuestionList(){
       //adjust the HTML to display the all questions
       const bodyElement = createDOMElement('ol');
   
@@ -83,7 +65,7 @@ export const setupFinishHTML = () => {
       (selectedAnswer===null) ? questionElement.innerHTML+= 'Empty</em>' :  questionElement.innerHTML+= selectedAnswer+'</em>' ;
       return questionElement;
   }
-  function  createQuitButton(){
+ export function  createQuitButton(){
 
     const exitButtonElement = createDOMElement('button', {class : CONTROL_BTN_CLASS});
     addClassToElement(exitButtonElement, BTN_CLASS);
