@@ -1,0 +1,110 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #32a852;
+}
+.container {
+  width: 425px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding:25px;
+  box-shadow: 0 0 10px 2px;
+}
+.header-display{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+padding: 3px;
+margin: 5px
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: 0.1fr 3fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10x;
+  text-align: left;
+  
+}
+.btn {
+  border: 1px solid #184624;;
+  background-color: #86f7a4;;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+}
+
+.btn:hover:enabled {
+  background-color : rgb(253, 189, 70);
+}
+
+.btn.correct {
+  background-color:rgb(7, 177, 7);
+  color: black;
+}
+
+.btn.wrong {
+  background-color:rgb(228, 93, 93);
+  color: black;
+}
+
+.control-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.result{
+  display: grid;
+  width: 100wv;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.header{
+  display: grid;
+  width: 100wv;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  margin: 10px
+  }
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.scrollable {
+  height: auto;
+  max-height: 80vh;
+  overflow: auto;
+}
+.correct{
+  color: rgb(7, 177, 7);
+}
+.wrong
+{
+  color:rgb(228, 93, 93)
+}
+.passed {
+  color : rgb(253, 189, 70);
+}
+.start {
+  display: grid;
+  padding: 5px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;  
+}
+h1{
+  padding: 0;
+  margin: 0;
+}

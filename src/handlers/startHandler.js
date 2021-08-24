@@ -1,0 +1,14 @@
+
+'use strict';
+import { quizData } from "../data.js";
+import { setupQuizHTML } from "../views/quizView.js";
+import { showCurrentQuestion } from '../handlers/questionHandlers.js';
+
+export const handleStartQuiz = () => {
+    //to start the quiz, adjust the required settings
+    quizData.currentQuestionIndex = 0;
+    //adjust the view
+    setupQuizHTML();
+    //display the view
+    showCurrentQuestion();
+}
