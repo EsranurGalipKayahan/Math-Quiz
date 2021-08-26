@@ -1,6 +1,6 @@
 'use strict';
 
-import { setupStartScreenHTML } from '../views/startViews.js';
+import { setupStartScreenHTML } from '../handlers/startHandler.js';
 
 const initializeQuiz = () => {
   setupStartScreenHTML();
