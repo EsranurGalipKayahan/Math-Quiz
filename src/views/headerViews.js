@@ -3,7 +3,6 @@ import { HEADER_CONTAINER_ID, HEADER_CLASS, HEADER_SCORE_ELEMENT_ID,  HEADER_LEV
 import { findScore } from "../handlers/finishHandler.js";
 import { createDOMElement, getDOMElement } from "../utils/DOMUtils.js";
 import { quizData } from "../data.js";
-import { startStopwatch } from "../handlers/timeHandler.js";
 
 
 export const getHeader = () => {

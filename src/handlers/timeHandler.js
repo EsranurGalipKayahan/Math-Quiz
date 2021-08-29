@@ -84,5 +84,5 @@ var timeAndDateHandling = {
 export function stopStopwatch() {
     // Clear interval
     clearInterval(elapsedTimeIntervalRef);
-    elapsedTimeIntervalRef = undefined;
+  
 }

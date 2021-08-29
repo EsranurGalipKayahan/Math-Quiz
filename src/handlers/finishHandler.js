@@ -32,7 +32,7 @@ export const quitQuiz = () => {
 }; 
 export const findScore=()=>{
     //find score of the user
-     let numberOfCorrectAnswers=quizData.numberOfCorrectAnswers;
+     const numberOfCorrectAnswers=quizData.numberOfCorrectAnswers;
      return (numberOfCorrectAnswers!==0) ? Math.round(numberOfCorrectAnswers*100/quizData.questions.length) : 0
 }
 export const findNumberOfPassedQuestions=()=>
