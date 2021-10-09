@@ -1,12 +1,10 @@
 # Getting Started
 
-This repository functions as the basis of the quiz project in the [Browsers module](https://github.com/HackYourFuture/Browsers). Before the first group meeting, have a look through this code and try to understand how it works and how it is organised. We will explain the idea behind the structure below as well as the Backlog (which will identify what is needed to be implemented).
-
-We have already implemented a very basic UI that can go through the questions to show you how this kind of code is split and how you can use the structure to your advantage. Have a look through it before your first group meeting as it can take a little while to get your head around it!
+This is a simple Math Quiz using Javascript and DOM. 
 
 ## Development
 
-To run this project locally you will need to open `index.html` in your browser using a local server. LiveServer, `http-server`, `study-lenses`, or any other local static server will work.
+To run this project locally you will need to open `index.html` in your browser using a local server. LiveServer, `http-server`, `study-lenses`, or any other local static server will work. Also. you can reach the demo directly via [this link.](https://esranurgalipkayahan.github.io/Math-Quiz/)
 
 ## Installing Dependencies
 
@@ -39,10 +37,6 @@ index.html
 - `views` this contains code to define what the DOM will look like. They will create the DOM element and give it back. They should never read from/write to the dom, that is what the handlers do.
 - `data.js` this is our data model. Anything we need to store in the browser we place inside the data file
 
-# Backlog
-
-So what should be built? Below is a collection of user stories you can choose from. Stories inside of each priority level are not necessarily in order, it's up to your group to decide how they fit into your strategy. These are also just suggestion, feel free to change them or create your own! Feel free to get creative.
-
 ## Must-Haves
 
 > these are necessary for basic usability
@@ -52,17 +46,5 @@ So what should be built? Below is a collection of user stories you can choose fr
 - [ ] A user can know which questions they got correct and incorrect (either immediately or at the end of the quiz)
 - [ ] A user can see the correct answer for questions (either immediately or at the end of the quiz)
 - [ ] A user can see their score at the end of the quiz
-
-## Nice-to-Haves
-
-> if time, add more features!
-
-- [ ] A user can see their score update in real-time as they select answers
-- [ ] A user can modify a question in the quiz
-- [ ] A user has access to resources for further study on each question
-- [ ] A user can "cheat" to see the correct answer, this forfeits the question
-- [ ] A user can remove questions from the quiz
-- [ ] A user can add questions to the quiz
-- [ ] Anything else you can think of... go nuts!
 
 
